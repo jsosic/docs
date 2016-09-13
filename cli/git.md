@@ -23,7 +23,7 @@ Import:
 git am /tmp/example.patch
 ```
 
-Example:
+Example (export last 10 commits):
 
 ```
 git format-patch -10 HEAD --stdout > /tmp/0001-last-10-commits.patch

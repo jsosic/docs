@@ -10,5 +10,11 @@ that I use rarely.
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
 
+### Storage subsystem
+* [Partitions](storage/partitions.md)
+
+### Networking
+* [Multicast](networking/multicast.md)
+
 ### Services
-* [RabbitMQ cluster](RabbitMQ/cluster.md)
+* [RabbitMQ cluster](services/RabbitMQ/cluster.md)
