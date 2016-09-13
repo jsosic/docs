@@ -8,6 +8,7 @@ that I use rarely.
 
 ### CLI tools
 * [Sudo](cli/sudo.md)
+* [Git](cli/git.md)
 
 ### Services
 * [RabbitMQ cluster](RabbitMQ/cluster.md)
