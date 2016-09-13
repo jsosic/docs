@@ -13,6 +13,7 @@ that I use rarely.
 
 ### Storage subsystem
 * [Partitions](storage/partitions.md)
+* [ZFS](storage/zfs.md)
 
 ### Networking
 * [Multicast](networking/multicast.md)
