@@ -12,6 +12,7 @@ that I use rarely.
 * [Ansible](cli/ansible.md)
 
 ### Storage subsystem
+* [Hardware](storage/hardware.md)
 * [Partitions](storage/partitions.md)
 * [ZFS](storage/zfs.md)
 
@@ -20,3 +21,4 @@ that I use rarely.
 
 ### Services
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
+* [MongoDB queries](services/MongoDB/queries.md)
