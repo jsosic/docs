@@ -20,9 +20,12 @@ that I use rarely.
 * [Multicast](networking/multicast.md)
 
 ### Services
-* [PostgreSQL system](docs/services/PostgreSQL/system.md)
+* [PostgreSQL system](services/PostgreSQL/system.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 
 ### Cloud
-* [Google Compute Engine CLI](docs/cloud/gce/cli.md)
+* [Google Compute Engine CLI](cloud/gce/cli.md)
+
+### Security
+* [Fail2Ban](security/fail2ban.md)
