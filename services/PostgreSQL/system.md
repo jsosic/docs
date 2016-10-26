@@ -10,6 +10,28 @@ pg_dump -Z2 -Fc db_name -f /tmp/db_name.gz
 pg_restore -j 8 -d db_name /tmp/db_name.gz
 ```
 
+### Copy roles between servers
+
+Dump and restore roles (without passwords):
+```
+pg_dumpall -g > roles.sql
+psql -U postgres -f roles.sql
+```
+
+### Views
+
+Show views on a particular table:
+
+```
+SELECT table_name from INFORMATION_SCHEMA.views;
+```
+
+Without system views:
+
+```
+SELECT table_name from INFORMATION_SCHEMA.views WHERE table_schema = ANY (current_schemas(false));
+```
+
 ## System queries
 
 Show currently running queries:
