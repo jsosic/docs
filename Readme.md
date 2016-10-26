@@ -9,6 +9,7 @@ that I use rarely.
 ### CLI tools
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
+* [Yum](cli/yum.md)
 * [Ansible](cli/ansible.md)
 
 ### Storage subsystem
