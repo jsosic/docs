@@ -2,6 +2,21 @@
 
 ## gcloud command
 
+### List and select projects
+
+When managing more then one project, you can list and select projects with:
+
+```
+$ gcloud projects list
+PROJECT_ID           NAME                 PROJECT_NUMBER
+compute-engine-6969  jsosic-foobar1       429052673518
+compute-engine-6970  jsosic-foobar2       249042524163
+```
+
+```
+gcloud config set project compute-engine-6969
+```
+
 ### Serial console
 
 Physical servers usually have some kind of remote console, like KVM, iLO,
