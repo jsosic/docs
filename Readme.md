@@ -26,6 +26,9 @@ that I use rarely.
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 
+### Hypervisors
+* [Citrix XenServer](hypervisors/xenserver.md)
+
 ### Cloud
 * [Google Compute Engine CLI](cloud/gce/cli.md)
 
