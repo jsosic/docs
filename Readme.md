@@ -28,6 +28,7 @@ that I use rarely.
 
 ### Hypervisors
 * [Citrix XenServer](hypervisors/xenserver.md)
+* [CoreOS](hypervisors/coreos.md)
 
 ### Cloud
 * [Google Compute Engine CLI](cloud/gce/cli.md)
