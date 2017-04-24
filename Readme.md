@@ -10,6 +10,7 @@ that I use rarely.
 * [Shortcuts](cli/shortcuts.md)
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
+* [Grep](cli/grep.md)
 * [Yum](cli/yum.md)
 * [Ansible](cli/ansible.md)
 
