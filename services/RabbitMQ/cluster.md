@@ -1,5 +1,13 @@
 # RabbitMQ Cluster
 
+## Query cluster
+
+List per-queue memory usage and number of messages:
+
+```
+rabbitmqctl list_queues name memory messages
+```
+
 ## Upgrade procedure
 
 ### Minor version upgrade
