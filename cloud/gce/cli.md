@@ -43,3 +43,10 @@ Afterwards you can connect to it by running:
 ```
 gcloud beta compute connect-to-serial-port [USER]@[INSTANCE_NAME]
 ```
+
+To disconnect from the serial console:
+
+```
+Press the ENTER key.
+Type ~. (tilde, followed by a period).
+```
