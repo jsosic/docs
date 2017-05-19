@@ -50,3 +50,12 @@ To disconnect from the serial console:
 Press the ENTER key.
 Type ~. (tilde, followed by a period).
 ```
+
+
+### Log in docker to registry
+
+Download keyfile and use it to log in:
+
+```
+docker login -u _json_key -p "$(cat keyfile.json)" https://gcr.io
+```
