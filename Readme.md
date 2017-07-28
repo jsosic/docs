@@ -13,6 +13,7 @@ that I use rarely.
 * [Grep](cli/grep.md)
 * [Yum](cli/yum.md)
 * [Ansible](cli/ansible.md)
+* [TcpDump](cli/tcpdump.md)
 
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
