@@ -38,3 +38,8 @@ that I use rarely.
 
 ### Security
 * [Fail2Ban](security/fail2ban.md)
+
+### OpenSSL
+* [Cert info](openssl/info.md)
+* [Cert generation](openssl/generate.md)
+* [Cert conversions](openssl/conv.md)
