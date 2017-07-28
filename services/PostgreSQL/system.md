@@ -37,6 +37,7 @@ SELECT table_name from INFORMATION_SCHEMA.views WHERE table_schema = ANY (curren
 Show currently running queries:
 
 ```
+SELECT usename,client_addr,waiting,query_start,state,pid FROM pg_stat_activity;
 SELECT datname,usename,procpid,client_addr,waiting,query_start,current_query FROM pg_stat_activity;
 ```
 
