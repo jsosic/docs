@@ -18,3 +18,11 @@ smartctl -a -d sat+megaraid,0 /dev/sda
 
 Note: `sda` represents VirtualDrive, while `0` is the number of 
 physical slot/drive in an array.
+
+## Secure erase SSD
+
+```
+hdparm --security-set-pass <master_password> /dev/sdb
+hdparm --user-master u --security-set-pass <user_password> /dev/sdb
+hdparm --user-master u --security-erase-enhanced <user_password> /dev/sdb
+```
