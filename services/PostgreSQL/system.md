@@ -34,7 +34,7 @@ SELECT table_name from INFORMATION_SCHEMA.views WHERE table_schema = ANY (curren
 
 ## System queries
 
-Show currently running queries:
+### Running queries
 
 ```
 SELECT usename,client_addr,waiting,query_start,state,pid FROM pg_stat_activity;
@@ -48,8 +48,15 @@ running at that instant and the usernames belonging to each connection:
 SELECT COUNT(*) as cnt, usename, current_query FROM pg_stat_activity GROUP BY usename,current_query ORDER BY cnt DESC;
 ```
 
-Find out the size of the database:
+### Database sizes
 
 ```
 SELECT pg_size_pretty(pg_database_size('mydatabasename')) As fulldbsize;
+```
+
+### Table sizes
+
+```
+SELECT table_schema, table_name, pg_relation_size('"'||table_schema||'"."'||table_name||'"')
+FROM information_schema.tables ORDER BY 3;
 ```
