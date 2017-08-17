@@ -26,6 +26,7 @@ that I use rarely.
 ### Services
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [MySQL system](services/MySQL/system.md)
+* [MySQL replication](services/MySQL/replication.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 
