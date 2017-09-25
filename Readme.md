@@ -29,6 +29,7 @@ that I use rarely.
 * [MySQL replication](services/MySQL/replication.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
 * [MongoDB queries](services/MongoDB/queries.md)
+* [Zookeeper ensemble](services/zookeeper/ensemble.md)
 
 ### Hypervisors
 * [Citrix XenServer](hypervisors/xenserver.md)
