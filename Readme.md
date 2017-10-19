@@ -37,6 +37,7 @@ that I use rarely.
 
 ### Cloud
 * [Google Compute Engine CLI](cloud/gce/cli.md)
+* [GitHub API](cloud/github/api.md)
 
 ### Security
 * [Fail2Ban](security/fail2ban.md)
