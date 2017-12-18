@@ -7,6 +7,7 @@ that I use rarely.
 ## Tips and tricks
 
 ### CLI tools
+* [Oneliners](cli/oneliners.md)
 * [Shortcuts](cli/shortcuts.md)
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
