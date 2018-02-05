@@ -6,6 +6,9 @@ that I use rarely.
 
 ## Tips and tricks
 
+### Automation
+* [Vagrant](automatoin/vagrant.md)
+
 ### CLI tools
 * [Oneliners](cli/oneliners.md)
 * [Shortcuts](cli/shortcuts.md)
