@@ -41,6 +41,7 @@ that I use rarely.
 * [CoreOS](hypervisors/coreos.md)
 
 ### Cloud
+* [AWS IAM](cloud/aws/iam.md)
 * [Google Compute Engine CLI](cloud/gce/cli.md)
 * [GitHub API](cloud/github/api.md)
 
