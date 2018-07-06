@@ -17,6 +17,12 @@ compute-engine-6970  jsosic-foobar2       249042524163
 gcloud config set project compute-engine-6969
 ```
 
+### Start and stop instances
+
+```
+gcloud compute instances --project <projectname> start <instance1> <instance2>
+```
+
 ### Serial console
 
 Physical servers usually have some kind of remote console, like KVM, iLO,
