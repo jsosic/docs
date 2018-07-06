@@ -12,6 +12,7 @@ that I use rarely.
 ### CLI tools
 * [Oneliners](cli/oneliners.md)
 * [Shortcuts](cli/shortcuts.md)
+* [Curl](cli/curl.md)
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
 * [Grep](cli/grep.md)
