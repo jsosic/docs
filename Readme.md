@@ -19,6 +19,7 @@ that I use rarely.
 * [Yum](cli/yum.md)
 * [Ansible](cli/ansible.md)
 * [TcpDump](cli/tcpdump.md)
+* [Reprepro](cli/reprepro.md)
 
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
