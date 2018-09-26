@@ -23,12 +23,25 @@ mysql> GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'<slave_ip>';
 Backup the master:
 
 ```
-# innobackupex --defaults-file=/etc/my.cnf /tmp/backup
-# innobackupex --defaults-file=/etc/my.cnf --apply-log /tmp/backup/2017-08-12_13-53-27/
+[jsosic@master ~]$ innobackupex --defaults-file=/etc/my.cnf /tmp/backup
+[jsosic@master ~]$ innobackupex --defaults-file=/etc/my.cnf --apply-log /tmp/backup/2017-08-12_13-53-27/
+```
+
+or with new `xtrabackup`:
+
+```
+[jsosic@master ~]$ xtrabackup --backup --open-files-limit 4096 --databases-exclude "db_name1 db_name2" --target-dir=/nfs/share/innobackupex/
+[jsosic@master ~]$ xtrabackup --prepare --open-files-limit 4096 --databases-exclude "db_name1 db_name2" --target-dir=/nfs/share/innobackupex/
 ```
 
 Stop the slave, and delete everything from datadir.
 Copy the backup from previous step to the datadir.
+
+One way to copy with new `xtrabackup` is:
+
+```
+[jsosic@slave ~]$ xtrabackup --move-back --target-dir=/nfs/share/innobackupex/
+```
 
 Set the following in slave `my.cnf`:
 
@@ -48,7 +61,7 @@ Start the MySQL on slave, and run the following:
 MASTER_HOST='10.10.10.10', \
 MASTER_USER='replicator',     \
 MASTER_PASSWORD='<secret>',   \
-MASTER_LOG_FILE='$(cat xtrabackup_binlog_info | cut -s -f 1)', \
-MASTER_LOG_POS=$(cat xtrabackup_binlog_info | cut -s -f 2); " | mysql
+MASTER_LOG_FILE='$(cut -s -f 1 xtrabackup_binlog_pos_innodb)', \
+MASTER_LOG_POS=$(cut -s -f 2 xtrabackup_binlog_pos_innodb); " | mysql
 # echo "START SLAVE; " | mysql
 ```
