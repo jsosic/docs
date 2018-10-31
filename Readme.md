@@ -47,6 +47,7 @@ that I use rarely.
 * [Google Compute Engine CLI](cloud/gce/cli.md)
 * [GitHub API](cloud/github/api.md)
 * [Travis CI tips and tricks](cloud/travis/tips.md)
+* [CloudFlare API](cloud/cloudflare/api.md)
 
 ### Security
 * [Fail2Ban](security/fail2ban.md)
