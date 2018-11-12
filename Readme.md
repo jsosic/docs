@@ -20,6 +20,7 @@ that I use rarely.
 * [Ansible](cli/ansible.md)
 * [TcpDump](cli/tcpdump.md)
 * [Reprepro](cli/reprepro.md)
+* [Others](cli/others.md)
 
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
