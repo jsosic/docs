@@ -61,3 +61,11 @@ Find the followers and restart them.
 
 After all 4 followers are running with new configuration and are in
 sync you can safely restart leader.
+
+### Create VHOST
+
+Vhost can be created by using `solr` client binary, for example:
+
+```
+bin/solr zk mkroot /solr -z zoo:2181,zoo:2181,zoo:2181
+```
