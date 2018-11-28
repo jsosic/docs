@@ -1,6 +1,15 @@
-# Yum
+# Rpm
 
-## Shell
+## Rebuild binary rpm
+
+To modify spec file of an existing RPM when you don't have the spec file,
+use `rpmrebuild`:
+
+```
+$ rpmrebuild -enp package-[version]-[release]-el7.[arch].rpm
+```
+
+## Yum Shell
 
 How to remove some packages and install other through `yum shell`:
 
@@ -25,12 +34,12 @@ EOF
 ```
 
 
-## Swap packages
+## Yum swap packages
 
 ```
 yum swap -- install foo -- remove bar
 ```
 
-## Old repositories
+## Yum old repositories
 
 * [RpmForge sources](http://repoforge.gtdinternet.com/source/)

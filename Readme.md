@@ -16,7 +16,7 @@ that I use rarely.
 * [Sudo](cli/sudo.md)
 * [Git](cli/git.md)
 * [Grep](cli/grep.md)
-* [Yum](cli/yum.md)
+* [Rpm](cli/rpm.md)
 * [Ansible](cli/ansible.md)
 * [TcpDump](cli/tcpdump.md)
 * [Reprepro](cli/reprepro.md)
