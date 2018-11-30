@@ -51,6 +51,7 @@ that I use rarely.
 * [CloudFlare API](cloud/cloudflare/api.md)
 
 ### Security
+* [SELinux](security/selinux.md)
 * [Fail2Ban](security/fail2ban.md)
 
 ### OpenSSL
