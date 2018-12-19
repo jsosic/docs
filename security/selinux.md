@@ -1,5 +1,20 @@
 # SELinux
 
+## AVCs not present in audit log
+
+There is a dontaudit rule that is blocking messages in audit log.
+To disable a dontaudit rule, run:
+
+```
+# semodule -DB
+```
+
+To turn it back on, run:
+
+```
+# semodule -B
+```
+
 ## Creating modules
 
 Extract offending log lines from `/var/log/audit/audit.log`,

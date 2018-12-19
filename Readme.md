@@ -31,6 +31,7 @@ that I use rarely.
 * [Multicast](networking/multicast.md)
 
 ### Services
+* [systemd](services/systemd.md)
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
 * [MySQL system](services/MySQL/system.md)
