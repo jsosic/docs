@@ -65,3 +65,51 @@ chmod -R  A+group:domain\ admins:list_directory/read_data/add_file/write_data/ad
 ```
 
 
+## Tunning
+
+### Basics
+
+Check logical block size on vdevs:
+
+```
+smartctl -a /dev/sdX | grep -i block
+```
+
+If there is a NVME, command is:
+
+```
+nvme list
+```
+
+Depending on `512b` vs `4k`, create zpool with either `ashift=9` or `ashift=12`:
+
+```
+zpool create -f -O compression=lz4 -O atime=off -o ashift=9 <pool_name> <list_of_vdevs>
+```
+
+Some settings (except for `ashift`) can be added later:
+
+```
+zfs set compression=lz4 xattr=sa atime=off tank
+```
+
+* compression is good if we have modern CPU which is mostly idle
+* `xattr=sa` stores attributes to system attributes instead of storing them to a file in a hidden dir (more seeks while reading)
+
+More [info](https://www.svennd.be/basic-zfs-tune-tips/).
+
+### Resilver speed
+
+
+Lower the number of ticks to delay prior to issuing a resilver I/O:
+
+```
+echo 0 > /sys/module/zfs/parameters/zfs_resilver_delay
+```
+
+Lower the idle time (number of clock ticks) by which the scan operation is delayed
+if the user I/O has been detected:
+
+```
+echo 0 > /sys/module/zfs/parameters/zfs_scan_idle
+```
