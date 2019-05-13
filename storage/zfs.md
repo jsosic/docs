@@ -87,6 +87,8 @@ Depending on `512b` vs `4k`, create zpool with either `ashift=9` or `ashift=12`:
 zpool create -f -O compression=lz4 -O atime=off -o ashift=9 <pool_name> <list_of_vdevs>
 ```
 
+**Note**: you can find out block vdev sector size like [this](https://gitlab.com/jsosic/docs/blob/master/storage/hardware.md#block-device-sector-size).
+
 Some settings (except for `ashift`) can be added later:
 
 ```
