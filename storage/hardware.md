@@ -1,5 +1,19 @@
 # Hardware
 
+## Block device sector size
+
+Get physical block (sector) size:
+
+```
+blockdev --getpbsz /dev/sda
+```
+
+or:
+
+```
+cat /sys/class/block/sda/queue/physical_block_size
+```
+
 ## Disk serial number
 
 ```
@@ -16,7 +30,7 @@ Check SMART status of member of an array behind MegaRaid controller.
 smartctl -a -d sat+megaraid,0 /dev/sda
 ```
 
-Note: `sda` represents VirtualDrive, while `0` is the number of 
+Note: `sda` represents VirtualDrive, while `0` is the number of
 physical slot/drive in an array.
 
 ## Secure erase SSD
