@@ -30,3 +30,67 @@ repmgr=# UPDATE repmgr.nodes \
     SET conninfo = 'user=repmgr port=5432 sslmode=require sslcompression=1 krbsrvname=postgres password=12345678 host=10.30.91.201 application_name=db01.example.lan' \
     WHERE node_name='db01.example.lan';
 ```
+
+## Streaming setup
+
+### Configuring master `postgresql.conf`
+
+Set `wal_level` to add information required to run read-only queries on a standby server:
+
+```
+wal_level = hot_standby
+```
+
+Wait for WAL records to be written to disk before the command returns a "success" to client
+
+```
+synchronous_commit = on
+```
+
+Send WAL segments to archive storage by setting `archive_command`:
+
+```
+archive_mode = on
+archive_command = 'test ! -f /var/lib/pgsql/9.5/data/pg_archive/%f && cp %p /var/lib/pgsql/9.5/data/pg_archive/%f'
+```
+
+Terminate replication connections that are inactive longer than the specified number of milliseconds:
+
+```
+wal_sender_timeout = 6000s
+```
+
+Allow RO queries during recovery:
+
+```
+hot_standby = on
+```
+
+Send replies at least every X seconds:
+
+```
+wal_receiver_status_interval = 10s
+```
+
+### Create replication user on master
+
+```
+CREATE ROLE replication WITH REPLICATION PASSWORD 'replicassword' LOGIN;
+```
+
+### Restore slave from master backup
+
+```
+pg_basebackup -h 10.10.11.101 -D /var/lib/pgsql/9.5/data -U replication -v -P
+```
+
+### Configure slave
+
+Set `recovery.conf`:
+
+```
+standby_mode = 'on'
+primary_conninfo = 'host=10.10.11.101 port=5432 user=replication password=replicassword application_name=rhcs02'
+restore_command = 'cp /var/lib/pgsql/9.5/data/pg_archive/%f %p'
+recovery_target_timeline='latest'
+```
