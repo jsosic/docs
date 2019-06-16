@@ -102,7 +102,6 @@ More [info](https://www.svennd.be/basic-zfs-tune-tips/).
 
 ### Resilver speed
 
-
 Lower the number of ticks to delay prior to issuing a resilver I/O:
 
 ```
@@ -114,4 +113,21 @@ if the user I/O has been detected:
 
 ```
 echo 0 > /sys/module/zfs/parameters/zfs_scan_idle
+```
+
+More info:
+* [Tunning of ZFS module](https://www.svennd.be/tuning-of-zfds-module/) by svennd
+
+## Resizing
+
+### Expand single vdev
+
+Vdevs can be expanded only by replascing them. So in a virtual environment,
+one can do the following to expand zpool vdev:
+
+```
+zpool set autoexpand=on tank
+zpool replace tank /dev/sdb /dev/sdc
+wipefs -af /dev/sdb
+zpool replace tank /dev/sdc /dev/sdb
 ```
