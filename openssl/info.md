@@ -50,3 +50,9 @@ openssl s_client -connect <remote_server>:443
 export domain_name=example.com
 echo -n | openssl s_client -connect ${domain_name}:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ${domain_name}.crt.pem
 ```
+
+# Print CRL info
+
+```
+openssl crl -text -noout -in some.crl
+```
