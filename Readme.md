@@ -32,6 +32,7 @@ that I use rarely.
 
 ### Services
 * [systemd](services/systemd.md)
+* [HaProxy socket](services/HaProxy/socket.md)
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
 * [MySQL system](services/MySQL/system.md)
