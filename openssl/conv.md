@@ -25,3 +25,9 @@ openssl pkcs12 -in keyStore.pfx -out keyStore.pem -nodes
 ```
 openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile CACert.crt
 ```
+
+## Convert private key from PKCS#1 format to PKCS#8
+
+```
+openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in pkcs1.key -out pkcs8.key
+```
