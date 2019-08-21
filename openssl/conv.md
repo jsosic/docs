@@ -28,6 +28,20 @@ openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificat
 
 ## Convert private key from PKCS#1 format to PKCS#8
 
+PKCS#1 format has the following header:
+
+```
+-----BEGIN RSA PRIVATE KEY-`----
+```
+
+while PKCS#8 has:
+
+```
+-----BEGIN PRIVATE KEY-----
+```
+
+To convert it, run:
+
 ```
 openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in pkcs1.key -out pkcs8.key
 ```
