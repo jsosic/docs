@@ -29,3 +29,17 @@ Example (export last 10 commits):
 git format-patch -10 HEAD --stdout > /tmp/0001-last-10-commits.patch
 git am /tmp/0001-Commit-Message-of-the-Commit.patch
 ```
+
+## Ignore files without gitignore
+
+To ignore a file localy, run:
+
+```
+git update-index --skip-worktree path/to/file
+```
+
+For unignore, run:
+
+```
+git update-index --no-skip-worktree path/to/file
+```
