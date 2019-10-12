@@ -25,6 +25,7 @@ that I use rarely.
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
 * [Partitions](storage/partitions.md)
+* [extfs](storage/extfs.md)
 * [ZFS](storage/zfs.md)
 
 ### Networking
