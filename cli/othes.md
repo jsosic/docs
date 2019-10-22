@@ -34,3 +34,10 @@ chroot /mnt/sysimage
 ```
 
 Note: replace `/dev/sda` with appropriate devices.
+
+
+## GoAccess report
+
+```
+cat access_log | goaccess -a --date-spec=hr -o html --log-format COMBINED - > report.html
+```
