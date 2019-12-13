@@ -18,6 +18,17 @@ pg_dumpall -g > roles.sql
 psql -U postgres -f roles.sql
 ```
 
+### Create md5 hash for user password
+
+```
+$ python
+>>> import hashlib
+>>> password='pero'
+>>> username='pero'
+>>> "md5" + hashlib.md5(password + username).hexdigest()
+'md50008c0dab2ff4c2f7e84fcab7eb8db6a'
+```
+
 ### Views
 
 Show views on a particular table:
