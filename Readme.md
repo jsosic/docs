@@ -34,6 +34,8 @@ that I use rarely.
 ### Services
 * [systemd](services/systemd.md)
 * [HaProxy socket](services/HaProxy/socket.md)
+* [Elasticsearch indices](services/Elasticsearch/indices.md)
+* [Elasticsearch ingest](services/Elasticsearch/ingest.md)
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
 * [MySQL system](services/MySQL/system.md)
