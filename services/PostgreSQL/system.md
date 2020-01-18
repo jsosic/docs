@@ -43,6 +43,14 @@ Without system views:
 SELECT table_name from INFORMATION_SCHEMA.views WHERE table_schema = ANY (current_schemas(false));
 ```
 
+## System upgrade
+
+Install new binaries, initdb, stop both servers, and run:
+
+```
+/usr/pgsql-10/bin/pg_upgrade -b /usr/pgsql-9.3/bin -B /usr/pgsql-10/bin -d /var/lib/pgsql/9.3/data -D /var/lib/pgsql/10/data
+```
+
 ## System queries
 
 ### Running queries
