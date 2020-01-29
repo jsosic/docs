@@ -42,6 +42,7 @@ openssl pkcs12 -info -in keyStore.p12
 
 ```
 openssl s_client -connect <remote_server>:443
+openssl s_client -showcerts -connect <remote_server>:443 -tls1 -servername <remote_server>
 ```
 
 # Download a certificate
