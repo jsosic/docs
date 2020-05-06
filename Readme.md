@@ -43,6 +43,7 @@ that I use rarely.
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 * [Zookeeper ensemble](services/zookeeper/ensemble.md)
+* [Jenkins pipelines](services/jenkins/pipelines.md)
 
 ### Hypervisors
 * [Citrix XenServer](hypervisors/xenserver.md)
