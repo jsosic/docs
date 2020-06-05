@@ -41,6 +41,7 @@ that I use rarely.
 * [MySQL system](services/MySQL/system.md)
 * [MySQL replication](services/MySQL/replication.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
+* [MongoDB replicaset](services/MongoDB/replicasets.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 * [Zookeeper ensemble](services/zookeeper/ensemble.md)
 * [Jenkins pipelines](services/jenkins/pipelines.md)
