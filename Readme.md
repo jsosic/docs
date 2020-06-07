@@ -51,6 +51,7 @@ that I use rarely.
 * [Citrix XenServer](hypervisors/xenserver.md)
 * [CoreOS](hypervisors/coreos.md)
 * [JVM](hypervisors/jvm.md)
+* [Docker](hypervisors/docker.md)
 
 ### Cloud
 * [AWS IAM](cloud/aws/iam.md)
