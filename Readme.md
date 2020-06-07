@@ -61,6 +61,7 @@ that I use rarely.
 * [CloudFlare API](cloud/cloudflare/api.md)
 
 ### Security
+* [PAM](security/pam.md)
 * [SELinux](security/selinux.md)
 * [Fail2Ban](security/fail2ban.md)
 
