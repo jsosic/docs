@@ -38,6 +38,12 @@ openssl  req -noout -modulus -in certificate.csr.pem | openssl md5
 openssl pkcs12 -info -in keyStore.p12
 ```
 
+# Verify certificate chain
+
+```
+openssl verify -untrusted certificate.crt.pem certificate.crt.pem
+```
+
 # Check a remote SSL certificate, and print all certificates (including intermediates)
 
 ```
