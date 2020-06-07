@@ -19,6 +19,7 @@ that I use rarely.
 * [Rpm](cli/rpm.md)
 * [Ansible](cli/ansible.md)
 * [TcpDump](cli/tcpdump.md)
+* [systemd](cli/systemd.md)
 * [Reprepro](cli/reprepro.md)
 * [Others](cli/others.md)
 
