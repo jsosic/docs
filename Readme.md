@@ -46,6 +46,7 @@ that I use rarely.
 * [MongoDB queries](services/MongoDB/queries.md)
 * [Zookeeper ensemble](services/zookeeper/ensemble.md)
 * [Jenkins pipelines](services/jenkins/pipelines.md)
+* [passenger](services/passenger/Readme.md)
 
 ### Hypervisors
 * [Citrix XenServer](hypervisors/xenserver.md)
