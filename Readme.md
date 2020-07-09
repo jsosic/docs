@@ -22,6 +22,7 @@ that I use rarely.
 * [systemd](cli/systemd.md)
 * [Reprepro](cli/reprepro.md)
 * [Others](cli/others.md)
+* [Scripts](cli/scripts/)
 
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
