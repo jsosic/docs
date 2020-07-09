@@ -64,6 +64,19 @@ chmod -R  A+group:domain\ admins:read_data/write_data/execute:allow jakov.sosic
 chmod -R  A+group:domain\ admins:list_directory/read_data/add_file/write_data/add_subdirectory/append_data/write_xattr/execute/write_attributes/write_acl/write_owner/delete/delete_child:allow
 ```
 
+## Get object number
+
+Use zdb -O to determine the object number of the file:
+
+```
+zdb -O <pool>/<dataset> path/to/file
+```
+
+Dump detailed data for object:
+
+```
+zdb -ddddd <object_id>
+```
 
 ## Tunning
 
