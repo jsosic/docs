@@ -17,3 +17,9 @@ member.hidden = false;
 member.votes = 1;
 rs.reconfig(cfg)
 ```
+
+## Add a new node (nonvoting, hidden)
+
+```
+rs.add( { host: "mongodb3.example.net:27017", priority: 0, votes: 0, hidden: true } )
+```
