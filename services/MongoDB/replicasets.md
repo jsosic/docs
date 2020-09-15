@@ -23,3 +23,16 @@ rs.reconfig(cfg)
 ```
 rs.add( { host: "mongodb3.example.net:27017", priority: 0, votes: 0, hidden: true } )
 ```
+
+## Create admin user
+
+```
+db.getSiblingDB("admin").createUser(
+  {
+    "user" : "admin",
+    "pwd" : "clear_text_PW",
+    roles: [ { "role" : "clusterAdmin", "db" : "admin" },
+             { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+```
