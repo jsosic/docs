@@ -32,6 +32,20 @@ openssl  rsa -noout -modulus -in certificate.key.pem | openssl md5
 openssl  req -noout -modulus -in certificate.csr.pem | openssl md5
 ```
 
+# Check key/cert lengths
+
+```
+openssl rsa -in secret.key -text -noout | grep "Private-Key"
+```
+
+```
+openssl x509 -in certificate.crt -text -noout | grep "Public-Key"
+```
+
+```
+$ echo | openssl s_client -connect google.com:443 2>/dev/null | openssl x509 -text -noout | grep "Public-Key"
+```
+
 # Check a PKCS#12 keystore
 
 ```
