@@ -14,3 +14,15 @@ for i in $(ls | sed 's/-.*//g'); do [[ $(date --date=$i +'%w') != 0 ]] && rm -fv
 ```
 sed -i -e ':a;N;$!ba;s/line1 match\nline2 match\n//' file
 ```
+
+## Kill all processes of user
+
+```
+kill -TERM $(ps -u <username> -o "pid=")
+```
+
+## Find and remove dead symlinks
+
+```
+find /usr/bin -type l ! -xtype f ! -xtype d -ok rm -f {} \;
+```
