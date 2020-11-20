@@ -47,3 +47,9 @@ To free pagecache, dentries and inodes:
 ```
 echo 3 > /proc/sys/vm/drop_caches
 ```
+
+Test TCP port with bash only (exit should be 0):
+
+```
+echo -e 'test' > /dev/tcp/<ip>/<port>
+```
