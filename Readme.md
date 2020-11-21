@@ -41,6 +41,7 @@ that I use rarely.
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [PostgreSQL users](services/PostgreSQL/users.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
+* [PostgreSQL benchmarking](services/PostgreSQL/bench.md)
 * [MySQL system](services/MySQL/system.md)
 * [MySQL replication](services/MySQL/replication.md)
 * [Redis sentinel](services/Redis/sentinel.md)
