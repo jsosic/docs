@@ -39,6 +39,7 @@ that I use rarely.
 * [Elasticsearch indices](services/Elasticsearch/indices.md)
 * [Elasticsearch ingest](services/Elasticsearch/ingest.md)
 * [PostgreSQL system](services/PostgreSQL/system.md)
+* [PostgreSQL users](services/PostgreSQL/users.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
 * [MySQL system](services/MySQL/system.md)
 * [MySQL replication](services/MySQL/replication.md)
