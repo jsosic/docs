@@ -10,6 +10,12 @@ pg_dump -Z2 -Fc db_name -f /tmp/db_name.gz
 pg_restore -j 8 -d db_name /tmp/db_name.gz
 ```
 
+Dump schema only:
+
+```
+pg_dump -s -d db_name -n schema_name
+```
+
 ### Copy roles between servers
 
 Dump and restore roles (without passwords):
