@@ -47,6 +47,7 @@ that I use rarely.
 * [MySQL replication](services/MySQL/replication.md)
 * [Redis sentinel](services/Redis/sentinel.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
+* [MongoDB system](services/MongoDB/system.md)
 * [MongoDB replicaset](services/MongoDB/replicasets.md)
 * [MongoDB queries](services/MongoDB/queries.md)
 * [Zookeeper ensemble](services/zookeeper/ensemble.md)
