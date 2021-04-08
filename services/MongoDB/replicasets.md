@@ -1,5 +1,20 @@
 # MongoDB Replica Sets
 
+## Create a new replicaset
+
+Start empty nodes, and run on one of them:
+
+```
+rs.initiate( {
+   _id : "replica.name",
+   members: [
+      { _id: 0, host: "mongo-n01.example.lan:27017" },
+      { _id: 1, host: "mongo-n01.example.lan:27017" },
+      { _id: 2, host: "mongo-n01.example.lan:27017" }
+   ]
+})
+```
+
 ## Check replica lag
 
 ```
