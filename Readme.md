@@ -39,6 +39,8 @@ that I use rarely.
 * [Elasticsearch cluster](services/Elasticsearch/cluster.md)
 * [Elasticsearch indices](services/Elasticsearch/indices.md)
 * [Elasticsearch ingest](services/Elasticsearch/ingest.md)
+* [Solr sharding](services/solr/sharding.md)
+* [Solr security](services/solr/security.md)
 * [PostgreSQL system](services/PostgreSQL/system.md)
 * [PostgreSQL users](services/PostgreSQL/users.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
