@@ -72,6 +72,13 @@ export domain_name=example.com
 echo -n | openssl s_client -connect ${domain_name}:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ${domain_name}.crt.pem
 ```
 
+# Check remote cert expiration dates
+
+```
+export domain_name=example.com
+openssl s_client -servername ${domain_name} -connect ${domain_name}:443 2>/dev/null | openssl x509 -noout -dates 
+```
+
 # Print CRL info
 
 ```
