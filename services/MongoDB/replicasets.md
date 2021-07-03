@@ -15,6 +15,14 @@ rs.initiate( {
 })
 ```
 
+## Check node state
+
+You can use [state.js](state.js), by running:
+
+```
+mongo state.js --quiet
+```
+
 ## Check replica lag
 
 ```
