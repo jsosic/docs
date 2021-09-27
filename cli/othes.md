@@ -1,5 +1,11 @@
 # Others
 
+## DNS queries with genent
+
+```
+getent hosts example.com
+```
+
 ## Seq
 
 Format output with zeroes when using `seq`:
