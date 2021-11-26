@@ -39,3 +39,9 @@ mongodump --authenticationDatabase admin -u admin -p zNUeYsr6xD47MCMD3A6u --port
 ]# ^C
 cat db_name.gz | mongorestore --drop --authenticationDatabase admin -u admin -p zNUeYsr6xD47MCMD3A6u --port 17017 --gzip --archive
 ```
+
+## Dump pipe to restore
+
+```
+mongodump --host <source_host>:<port> --db <database_name> --gzip --archive | \
+mongorestore --drop -vvvvvv -h <target_host>:<port> --db <database_name> --gzip --archive```
