@@ -7,7 +7,7 @@ that I use rarely.
 ## Tips and tricks
 
 ### Automation
-* [Vagrant](automatoin/vagrant.md)
+* [Vagrant](automation/vagrant.md)
 
 ### CLI tools
 * [Oneliners](cli/oneliners.md)
@@ -23,6 +23,9 @@ that I use rarely.
 * [Reprepro](cli/reprepro.md)
 * [Others](cli/others.md)
 * [Scripts](cli/scripts/)
+
+### OS
+* [CentOS](os/centos.md)
 
 ### Storage subsystem
 * [Hardware](storage/hardware.md)
