@@ -45,3 +45,14 @@ cat db_name.gz | mongorestore --drop --authenticationDatabase admin -u admin -p 
 ```
 mongodump --host <source_host>:<port> --db <database_name> --gzip --archive | \
 mongorestore --drop -vvvvvv -h <target_host>:<port> --db <database_name> --gzip --archive```
+
+## Compact collections
+
+Compact (to recover unused disk space) all collections in a single database:
+
+```
+db.getCollectionNames().forEach(function (collectionName) {
+    print('Compacting: ' + collectionName);
+    db.runCommand({ compact: collectionName });
+});
+```
