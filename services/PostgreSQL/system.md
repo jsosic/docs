@@ -10,6 +10,12 @@ pg_dump -Z2 -Fc db_name -f /tmp/db_name.gz
 pg_restore -j 8 -d db_name /tmp/db_name.gz
 ```
 
+If we want to restore with different owner:
+
+```
+pg_restore -j 8 --no-owner --role=user2 -d db_name /tmp/db_name.gz
+```
+
 Dump schema only:
 
 ```
