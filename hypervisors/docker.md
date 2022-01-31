@@ -1,5 +1,11 @@
 # Docker
 
+## Run debug container
+
+```
+docker run -it --pid=host centos:8 bash
+```
+
 ## Release file descriptor of deleted files
 
 ```
