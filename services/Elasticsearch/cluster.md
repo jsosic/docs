@@ -1,5 +1,27 @@
 # Elasticsearch cluster
 
+## General
+
+Check cluster health:
+
+```
+curl -k -XGET 'https://127.0.0.1:9200/_cluster/health?pretty' -H "Authorization: Basic $(echo -n 'username:password' | base64)"
+```
+
+## Nodes
+
+Remove a node:
+
+```
+curl -XPUT "http://127.0.0.1:9200/_cluster/settings" -d  '{ "transient" :{ "cluster.routing.allocation.exclude._ip" : "X.X.X.X" } }'
+```
+
+Force a synced flush of a node:
+
+```
+curl -XPOST 'http://localhost:9200/_flush/synced'
+```
+
 ## HTTPS and Authorization
 
 Enable https by setting up XPack:
@@ -23,9 +45,4 @@ Set up initial password:
 
 ```
 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
-```
-
-Check cluster health:
-```
-curl -k -XGET 'https://127.0.0.1:9200/_cluster/health?pretty' -H "Authorization: Basic $(echo -n 'username:password' | base64)"
 ```
