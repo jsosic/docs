@@ -2,6 +2,12 @@
 
 ## gcloud command
 
+### Activate service account
+
+```
+gcloud auth activate-service-account --key-file=key.json
+```
+
 ### List and select projects
 
 When managing more then one project, you can list and select projects with:
