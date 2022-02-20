@@ -59,3 +59,9 @@ db.getSiblingDB("admin").createUser(
   }
 )
 ```
+
+## Create a replicaset key
+
+```
+openssl rand -base64 756 > <path-to-keyfile>
+```
