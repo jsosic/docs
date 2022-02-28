@@ -43,3 +43,13 @@ yum swap -- install foo -- remove bar
 ## Yum old repositories
 
 * [RpmForge sources](http://repoforge.gtdinternet.com/source/)
+
+## Recreate yum db
+
+Yum database can get corrupted (for example: full disk during yum operation), and to regenerate it, run:
+
+```
+rm -f /var/lib/rpm/__*
+rpm --rebuilddb -v -v
+yum clean all
+```
