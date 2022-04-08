@@ -37,3 +37,20 @@ for i in $(curl -sS -X GET "localhost:9200/_cat/indices?v&pretty" | grep yellow 
        -X PUT "localhost:9200/${i}/_settings";
 done
 ```
+
+
+## Move indice to another node in cluster
+
+```
+curl --user elastic:password -H "Content-Type: application/json" -XPOST "https://$(hostname -f):9200/_cluster/reroute" -d '
+{
+  "commands" : [
+    {
+      "move" : {
+         "index" : "my-super-cool-index-2022.02.06-000070", "shard" : 0,
+          "from_node" : "node01", "to_node" : "node02"
+       }
+    }
+  ]
+}'
+```
