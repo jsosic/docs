@@ -6,8 +6,9 @@
 
 Dump and restore optimized for speed:
 ```
-pg_dump -Z2 -Fc db_name -f /tmp/db_name.gz
-pg_restore -j 8 -d db_name /tmp/db_name.gz
+export DB_NAME=mydb
+pg_dump -Z2 -Fc $DB_NAME -f /tmp/$DB_NAME.gz
+pg_restore -j 8 -d $DB_NAME /tmp/$DB_NAME.gz
 ```
 
 If we want to restore with different owner:
