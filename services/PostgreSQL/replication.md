@@ -2,6 +2,12 @@
 
 ## RO commands
 
+### Check if master or slave
+
+```
+SELECT pg_is_in_recovery();
+```
+
 ### Check replication status
 
 ```
