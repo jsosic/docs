@@ -1,32 +1,5 @@
 # MongoDB system
 
-## Create admin user
-
-```
-db.createUser(
-  {
-     user: "admin",
-     pwd: "password",
-     "roles" : [
-       {
-         "role" : "root",
-         "db" : "admin"
-       },
-       {
-         "role" : "clusterAdmin",
-         "db" : "admin"
-       },
-       {
-         "role" : "userAdminAnyDatabase",
-         "db" : "admin"
-       }
-     ],
-
-  }
-)
-
-```
-
 ## Dump
 
 ```
