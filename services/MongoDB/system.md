@@ -2,15 +2,37 @@
 
 ## Dump
 
+### Single database
+
 ```
-mongodump --authenticationDatabase admin -u admin -p zNUeYsr6xD47MCMD3A6u --port 17017 --db db_name --gzip --archive=db_name.gz
+mongodump --authenticationDatabase admin -u admin -p password --port 17017 --db db_name --gzip --archive=db_name.gz
+```
+
+### All databases
+
+```
+for db_name in $(echo 'show dbs' |  mongo --port 17017 | grep -v -E 'admin|config|local' | grep B$ | cut -d' ' -f 1); do
+  mongodump --authenticationDatabase admin -u admin -p password --port 17017 --db ${db_name} --gzip --archive=${db_name}.gz
+done
+
 ```
 
 ## Restore
 
+### Single database
+
 ```
-]# ^C
-cat db_name.gz | mongorestore --drop --authenticationDatabase admin -u admin -p zNUeYsr6xD47MCMD3A6u --port 17017 --gzip --archive
+cat db_name.gz | mongorestore --drop --authenticationDatabase admin -u admin -p password --port 17017 --gzip --archive
+```
+
+### All databases
+
+```
+password=password
+for db_name in $(echo * | sed 's/.gz//g'); do
+  cat ${db_name}.gz | mongorestore --drop --authenticationDatabase admin -u admin -p ${password} --port 17017 --gzip --archive
+done
+
 ```
 
 ## Dump pipe to restore
