@@ -68,6 +68,7 @@ that I use rarely.
 
 ### Cloud
 * [AWS IAM](cloud/aws/iam.md)
+* [AWS S3](cloud/aws/s3.md)
 * [Google Compute Engine CLI](cloud/gce/cli.md)
 * [GitHub API](cloud/github/api.md)
 * [Travis CI tips and tricks](cloud/travis/tips.md)
