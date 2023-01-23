@@ -17,6 +17,14 @@ Copy partition schema directly from sda to sdb in one step:
 sfdisk -d /dev/sda | sfdisk /dev/sdb
 ```
 
+In case of a GPT partition, `sgdisk` utility should be used:
+
+```
+sgdisk --backup=table /dev/sda
+sgdisk --load-backup=table /dev/sdb
+sgdisk -G /dev/sdb
+```
+
 ## Extract partition from block device
 
 First list the contents of the drive:
