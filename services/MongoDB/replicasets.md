@@ -41,6 +41,38 @@ member.votes = 1;
 rs.reconfig(cfg)
 ```
 
+## Make visible slave node
+
+```
+var cfg = rs.config();
+var member = cfg.members[<node number>];
+printjson(member)
+member.priority = 0;
+member.hidden = true;
+member.votes = 0;
+rs.reconfig(cfg)
+```
+
+## Replace node 1 with node 4
+
+```
+var cfg = rs.config();
+
+var member = cfg.members[0];
+member
+member.priority = 1;
+member.hidden = false;
+member.votes = 1;
+
+var member = cfg.members[4];
+member
+member.priority = 0;
+member.hidden = true;
+member.votes = 0;
+rs.reconfig(cfg)
+```
+
+
 ## Add a new node (nonvoting, hidden)
 
 ```
