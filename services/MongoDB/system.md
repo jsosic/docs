@@ -51,3 +51,18 @@ db.getCollectionNames().forEach(function (collectionName) {
     db.runCommand({ compact: collectionName });
 });
 ```
+
+### Check, increase and compact oplog size
+
+```
+use local
+db.oplog.rs.stats().maxSize
+```
+
+```
+db.adminCommand({replSetResizeOplog: 1, size: Double(16000)})
+```
+
+```
+db.runCommand({ "compact" : "oplog.rs" } )
+```
