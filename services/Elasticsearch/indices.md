@@ -54,3 +54,17 @@ curl --user elastic:password -H "Content-Type: application/json" -XPOST "https:/
   ]
 }'
 ```
+
+## Show unassigned shards
+
+### Print unassigned shards with a reason
+
+```
+curl --user elastic:password -XGET localhost:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED
+```
+
+### Explain cluster allocation
+
+```
+curl --user elastic:password -XGET localhost:9200/_cluster/allocation/explain?pretty
+```
