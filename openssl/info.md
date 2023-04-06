@@ -61,7 +61,7 @@ openssl verify -untrusted certificate.crt.pem certificate.crt.pem
 # Check a remote SSL certificate, and print all certificates (including intermediates)
 
 ```
-openssl s_client -connect <remote_server>:443
+openssl s_client -showcerts -connect <remote_server>:443
 openssl s_client -showcerts -connect <remote_server>:443 -tls1 -servername <remote_server>
 ```
 
