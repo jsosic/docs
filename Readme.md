@@ -34,6 +34,7 @@ that I use rarely.
 * [ZFS](storage/zfs.md)
 
 ### Networking
+* [Routing](networking/routing.md)
 * [Multicast](networking/multicast.md)
 
 ### Services
