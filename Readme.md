@@ -49,6 +49,7 @@ that I use rarely.
 * [PostgreSQL users](services/PostgreSQL/users.md)
 * [PostgreSQL replication](services/PostgreSQL/replication.md)
 * [PostgreSQL benchmarking](services/PostgreSQL/bench.md)
+* [Pacemaker CLI](services/Pacemaker/cli.md)
 * [MySQL system](services/MySQL/system.md)
 * [MySQL replication](services/MySQL/replication.md)
 * [Redis CLI](services/Redis/cli.md)
