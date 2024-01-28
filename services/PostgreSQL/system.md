@@ -77,8 +77,27 @@ Top-like view of current queries, grouped by how many of the same query are
 running at that instant and the usernames belonging to each connection:
 
 ```
-SELECT COUNT(*) as cnt, usename, current_query FROM pg_stat_activity GROUP BY usename,current_query ORDER BY cnt DESC;
+SELECT COUNT(\*) as cnt, usename, current_query FROM pg_stat_activity GROUP BY usename,current_query ORDER BY cnt DESC;
 ```
+
+### Files in datadir
+
+To get the list of all the relations and respective files, run:
+
+```
+SELECT pg_relation_filenode(oid) FROM pg_class WHERE relkind IN ('i','r','t','S','m') AND reltablespace=0 ORDER BY 1;
+```
+
+Now, if we want to find unused files, compare the output with the:
+
+```
+cd $PGDATA/base/<oid>
+ls | grep -E '^[0-9]+$' | sort -n
+```
+
+Lingering data files that do not correspond to any object that the DB knows about should
+appear in the diff of outputs of these two commands. Those files should be safe to delete.
+
 
 ### Database sizes
 
