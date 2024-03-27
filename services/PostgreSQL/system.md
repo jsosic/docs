@@ -23,6 +23,21 @@ Dump schema only:
 pg_dump -s -d db_name -n schema_name
 ```
 
+### Dump and restore with modifications
+
+If we want to change the owner or anything else in the database while transferring, we can do:
+
+```
+export DB_NAME=mydb
+pg_dump -Fp $DB_NAME | sed 's/OWNER TO owner1;/OWNER TO owner2;/g' | xz -1 > /tmp/$DB_NAME.xz
+```
+
+Restore is done via `psql`:
+
+```
+xzcat /tmp/$DB_NAME.gz | psql $DB_NAME > import.log
+```
+
 ### Copy roles between servers
 
 Dump and restore roles (without passwords):
