@@ -58,3 +58,24 @@ Peeking into the contents of the partition is as easy as:
 ```
 # mount -o loop,ro partition3-file /mnt/hack
 ```
+
+## Check open files on the mointpoint
+
+Print processes with open files:
+
+```
+lsof +f -- /mnt/volume
+```
+
+List used files:
+
+```
+fuser -vmM /mnt/volume
+```
+
+Kill all processes with files open (write only, or all):
+
+```
+fuser -vmMkiw /mnt/volume
+fuser -vmMk /mnt/volume
+```
