@@ -52,6 +52,7 @@ that I use rarely.
 * [Pacemaker CLI](services/Pacemaker/cli.md)
 * [MySQL system](services/MySQL/system.md)
 * [MySQL replication](services/MySQL/replication.md)
+* [MySQL pacemaker](services/MySQL/pcs.md)
 * [Redis CLI](services/Redis/cli.md)
 * [Redis sentinel](services/Redis/sentinel.md)
 * [RabbitMQ cluster](services/RabbitMQ/cluster.md)
